@@ -5,7 +5,7 @@
 #### The application was created using [vite + react](https://vitejs.dev/guide/)
 
 ## Description
-A simple application using the free Weather API https://openweathermap.org/
+A simple application using the free [Weather API](https://openweathermap.org/)
 
 ## User Stories
 
