@@ -4,8 +4,9 @@ import axios from "axios"
 function App() {
   const[data, setData] = useState({})
   const[location, setLocation] = useState("")
+  const apiKey = import.meta.env.VITE_API_KEY
 
-  const url =`https://api.openweathermap.org/data/2.5/weather?q=${location}&units=imperial&appid=aab57810e972f7ee9d68fac985ae2547`
+  const url =`https://api.openweathermap.org/data/2.5/weather?q=${location}&units=metric&appid=${apiKey}`
 
   const searchLocation = (event) => {
     if (event.key === 'Enter') {
@@ -33,7 +34,7 @@ function App() {
             <p>{data.name}</p>
           </div>
           <div className="temp">
-            {data.main ? <h1>{data.main.temp.toFixed()}°F</h1> : null}
+            {data.main ? <h1>{data.main.temp.toFixed()}°C</h1> : null}
           </div>
           <div className="description">
             {data.weather ? <p>{data.weather[0].main}</p> : null}
@@ -42,7 +43,7 @@ function App() {
       {data.name !=undefined && 
         <div className="bottom">
           <div className="feels">
-            {data.main ? <p className='bold'>{data.main.feels_like.toFixed()}°F</p> : null}
+            {data.main ? <p className='bold'>{data.main.feels_like.toFixed()}°C</p> : null}
             <p>Feels like</p>
           </div>
           <div className="humidity">
