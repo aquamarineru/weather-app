@@ -10,7 +10,8 @@ function App() {
 
   const searchLocation = (event) => {
     if (event.key === 'Enter') {
-      axios.get(url).then((response) => {
+      axios.get(url)
+      .then((response) => {
         setData(response.data)
         console.log(response.data)
       })
@@ -36,7 +37,7 @@ function App() {
           <div className="temp">
             {data.main ? <h1>{data.main.temp.toFixed()}°C</h1> : null}
           </div>
-          <div className="description">
+          <div className="description" style={{backgroundImage: `url('assets/')`}}>
             {data.weather ? <p>{data.weather[0].main}</p> : null}
           </div>
         </div>
