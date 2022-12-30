@@ -2,7 +2,7 @@
 <div align="center">
 </div>
 
-#### The application was created using (vite + react)[https://vitejs.dev/guide/]
+#### The application was created using [vite + react](https://vitejs.dev/guide/)
 
 ## Description
 A simple application using the free Weather API https://openweathermap.org/
